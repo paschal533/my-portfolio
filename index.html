@@ -13,6 +13,9 @@
         <!--==================== CSS ====================-->
         <link rel="stylesheet" href="assets/css/styles.css">
 
+        <!--==================== AOS CSS ================-->
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
         <title>Responsive Portfolio Website</title>
     </head>
     <body>
@@ -134,7 +137,7 @@
             </section>
 
             <!--==================== ABOUT ====================-->
-            <section class="about section" id="about">
+            <section  data-aos="fade-up" class="about section" id="about">
                 <h2 class="section__title">About Me</h2>
                 <span class="section__subtitle">My introduction</span>
 
@@ -173,7 +176,7 @@
             </section>
 
             <!--==================== SKILLS ====================-->
-            <section class="skills section" id="skills">
+            <section  data-aos="fade-up" class="skills section" id="skills">
                 <h2 class="section__title">Skills</h2>
                 <span class="section__subtitle">MY technical level</span>
 
@@ -297,7 +300,7 @@
             </section>
 
             <!--==================== QUALIFICATION ====================-->
-            <section class="qualification section">
+            <section  data-aos="fade-up" class="qualification section">
                 <h2 class="section__title">Qualification</h2>
                 <span class="section__subtitle">My personal journey</span>
 
@@ -411,7 +414,7 @@
             </section>
 
             <!--==================== SERVICES ====================-->
-            <section class="services section" id="services">
+            <section  data-aos="fade-up" class="services section" id="services">
                 <h2 class="section__title">Services</h2>
                 <span class="section__subtitle">What I offer</span>
 
@@ -536,7 +539,7 @@
             </section>
 
             <!--==================== PORTFOLIO ====================-->
-            <section class="portfolio section" id="portfolio">
+            <section  data-aos="fade-up" class="portfolio section" id="portfolio">
                 <h2 class="section__title">Portfolio</h2>
                 <span class="section__subtitle">Most recent work</span>
 
@@ -599,7 +602,7 @@
             </section>
 
             <!--==================== PROJECT IN MIND ====================-->
-            <section class="project section">
+            <section  data-aos="fade-up" class="project section">
                 <div class="project__bg">
                     <div class="project__container container grid">
                         <div class="project__data">
@@ -618,7 +621,7 @@
             </section>
 
             <!--==================== TESTIMONIAL ====================-->
-            <section class="testimonial section">
+            <section  data-aos="fade-up" class="testimonial section">
                 <h2 class="section__title">Testimonial</h2>
                 <span class="section__subtitle">My client saying</span>
 
@@ -746,22 +749,18 @@
                     <form action="" class="contact__form grid">
                         <div class="contact__inputs grid">
                             <div class="contact content">
-                                <label for="" class="contact__label">Name</label>
-                                <input type="text" class="contact__input">
+                                <input placeholder="Name" type="text" class="contact__input">
                             </div>
                             <div class="contact content">
-                                <label for="" class="contact__label">Email</label>
-                                <input type="email" class="contact__input">
+                                <input placeholder="Email" type="email" class="contact__input">
                             </div>
                         </div>
 
                         <div class="contact content">
-                            <label for="" class="contact__label">Project</label>
-                            <input type="text" class="contact__input">
+                            <input placeholder="Project" type="text" class="contact__input">
                         </div>
                         <div class="contact content">
-                            <label for="" class="contact__label">Message</label>
-                            <textarea class="contact__input" name="" id="" cols="0" rows="7"></textarea>
+                            <textarea placeholder="Message" class="contact__input" name="" id="" cols="0" rows="7"></textarea>
                          </div>
 
                          <div>
@@ -821,7 +820,8 @@
         </a>
 
         <!--==================== SWIPER JS ====================-->
-        <script src="assets//js/swiper-bundle.min.js"></script>
+        <script src="./assets/js/swiper-bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/6.5.8/swiper-bundle.min.js" integrity="sha512-sAHYBRXSgMOV2axInO6rUzuKKM5SkItFLlLHQ8YjRD+FBwowtATOs4njP9oim3/MzyAGrB52SLDjpAOLcOT9TA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <!---============== Type Js=============================-->
         <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
@@ -837,5 +837,14 @@
 
         <!--==================== MAIN JS ====================-->
         <script src="assets/js/main.js"></script>
+
+        <!---========== AOS script ============================-->
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init({
+                offset: 400,
+                duration: 500
+            });
+        </script>
     </body>
 </html>
