@@ -19,7 +19,10 @@
         <!--==================== HEADER ====================-->
         <header class="header" id="header">
             <nav class="nav container">
-                <a href="#" class="nav__logo">Paschal</a>
+                <a href="#" class="nav__logo">
+                    <h3>Paschal</h3>
+                    <h3>Paschal</h3>
+                </a>
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list grid">
@@ -62,8 +65,8 @@
                     <i class="uil uil-moon change-theme" id="theme-button"></i>
 
 
-                    <div class="nav__toggle" id="nav-toggle">
-                        <i class="uil uil-apps"></i>
+                    <div class="nav__toggle" >
+                        <i class="uil uil-apps" id="nav-toggle" ></i>
                     </div>
                 </div>
             </nav>
@@ -109,8 +112,8 @@
                         </div>
 
                         <div class="home__data">
-                            <h1 class="home__title">Hi, I'm Paschal</h1>
-                            <h3 class="home__subtitle">Frontend developer</h3>
+                            <h1 class="home__title">Hi, I'm <span class="auto-input"></span></h1>
+                            <h3 data-text="Frontend developer" class="home__subtitle">Frontend developer</h3>
                             <p class="home__description">High level exprience in web design and development
                                 knowledge, producing quality work.</p>
                             <a href="" class="button botton--flex">
@@ -818,6 +821,18 @@
 
         <!--==================== SWIPER JS ====================-->
         <script src="assets//js/swiper-bundle.min.js"></script>
+
+        <!---============== Type Js=============================-->
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+        <script>
+            let typed = new Typed(".auto-input", {
+                strings: ["Paschal"],
+                typeSpeed: 100,
+                backSpeed: 100,
+                loop: true
+            })
+        </script>
 
         <!--==================== MAIN JS ====================-->
         <script src="assets/js/main.js"></script>

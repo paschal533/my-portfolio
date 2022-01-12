@@ -88,10 +88,11 @@ body.dark-theme{
 .nav__btns{
     display: flex;
     align-items: center;
+    padding-top: 10px;
 }
 
 .change-theme{
-    font-size: 1.25rem;
+    font-size: 2rem;
     color: var(--title-color);
     margin-right: var(--mb-1);
     cursor: pointer;
@@ -173,7 +174,6 @@ img{
 .header{
     width: 100%;
     position: fixed;
-    bottom: 0;
     left: 0;
     z-index: var(--z-fixed);
     background-color: var(--body-color);
@@ -188,7 +188,35 @@ img{
     align-items: center;
 }
 
-.nav__logo,
+.nav__logo{
+    position: relative;
+}
+.nav__logo h3{
+    position: absolute;
+    top: -25px;
+    font-size: 2.5rem;
+    font-weight: 8em;
+}
+
+.nav__logo h3:nth-child(1){
+    color: transparent;
+    -webkit-text-stroke: .1px var(--title-color);
+}
+
+.nav__logo h3:nth-child(2){
+    color: var(--title-color);
+    animation: animate 4s ease-in-out infinite;
+}
+
+@keyframes animate {
+    0%,100%{
+        clip-path: polygon(0% 45%, 15% 44%, 32% 50%, 54% 60%, 70% 61%, 84% 59%, 100% 52%, 100% 100%, 0% 100%);
+    }
+    50%{
+        clip-path: polygon(0% 60%, 16% 65%, 34% 66%, 51% 62%, 67% 50%, 84% 45%, 100% 46%, 100% 100%, 0% 100%);
+    }
+}
+
 .nav__toggle{
     color: var(--title-color);
     font-weight: var(--font-medium);
@@ -199,7 +227,7 @@ img{
 }
 
 .nav__toggle{
-    font-size: 1.1rem;
+    font-size: 2rem;
     cursor: pointer;
 }
 
@@ -240,14 +268,14 @@ img{
 }
 
 .nav__icon{
-    font-size: 1.2rem;
+    font-size: 1.6rem;
 }
 
 .nav__close{
     position: absolute;
     right: 1.3rem;
     bottom: .5rem;
-    font-size: 1.5rem;
+    font-size: 2rem;
     cursor: pointer;
     color: var(--first-color)
 }
@@ -280,7 +308,7 @@ img{
 
 .home__content{
     grid-template-columns: .5fr 3fr;
-    padding-top: 3.5rem;
+    padding-top: 5.5rem;
     align-items: center;
 }
 
@@ -290,12 +318,12 @@ img{
     row-gap: 1rem;
 }
 
-.home__socail-icon{
-    font-size: 1.25rem;
+.home__social-icon{
+    font-size: 1.5rem;
     color: var(--first-color);
 }
 
-.home__socail-icon:hover{
+.home__social-icon:hover{
     color: var(--first-color-ait);
 }
 
@@ -315,6 +343,7 @@ img{
 .home__title{
     font-size: var(--big-font-size);
 }
+ 
 
 .home__subtitle{
     font-size: var(--h3-font-size);
@@ -920,6 +949,7 @@ img{
 /*==================== FOOTER ====================*/
 .footer{
     padding-top: 2rem;
+    margin-bottom: -50px !important;
 }
 
 .footer__container{
@@ -1118,6 +1148,10 @@ img{
         margin-right: auto;
     }
 
+    .nav__btns{
+        padding-top: 0px;
+    }
+
     body{
         margin: 0;
     }
@@ -1286,12 +1320,16 @@ img{
         padding: 0;
     }
 
+     .home__container{
+            max-width: 810px;
+     }
+
     .home__blob{
         width: 320px;
     }
 
     .home__social{
-        transform: translateX(-6rem);
+        transform: translateX(-4rem);
     }
 
     .services__container{

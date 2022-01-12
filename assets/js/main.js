@@ -6,9 +6,28 @@ const navMenu = document.getElementById('nav-menu'),
 
 /*===== MENU SHOW =====*/
 /* Validate if constant exists */
+const menu = "uil-times";
+const showMenu = 'show-menu';
+const selectedShowMenu = localStorage.getItem('selected-showMenu')
+const selectedMenu = localStorage.getItem('selected-menu')
+
+const getCurrentMenu = () => navToggle.classList.contains(menu) ? 'uil-apps' : 'uil-times'
+const getCurrentShowMenu = () => document.body.classList.contains(showMenu) ? '' : 'light'
+
+ 
+if (selectedMenu) {
+    // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
+    navMenu.classList[selectedShowMenu === '' ? 'add' : 'remove'](showMenu)
+    navToggle.classList[selectedMenu === 'uil-apps' ? 'add' : 'remove'](menu)
+  }
+
 if(navToggle){
     navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu')
+             
+            navToggle.classList.toggle(menu)
+            navMenu.classList.toggle(showMenu)
+            localStorage.setItem('selected-showMenu', getCurrentShowMenu())
+            localStorage.setItem('selected-menu', getCurrentMenu()) 
     })
 }
 
@@ -17,6 +36,9 @@ if(navToggle){
 if(navClose){
     navClose.addEventListener('click', () => {
         navMenu.classList.remove('show-menu')
+
+        navToggle.classList.toggle(menu)
+        localStorage.setItem('selected-menu', getCurrentMenu())
     })
 }
 
@@ -28,6 +50,9 @@ function linkAction(){
     const navMenu = document.getElementById('nav-menu')
     //when we click on each nav__link, we remove the show-menu class
     navMenu.classList.remove('show-menu')
+
+    navToggle.classList.toggle(menu)
+    localStorage.setItem('selected-menu', getCurrentMenu())
 }
 navLink.forEach(n => n.addEventListener('click', linkAction))
 
