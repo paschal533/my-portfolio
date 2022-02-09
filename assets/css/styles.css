@@ -441,8 +441,11 @@ img{
 }
 
 .about__description{
+    margin: 15px;
     text-align: center;
     margin-bottom: var(--mb-2-5);
+    text-indent: 20px;
+    text-align: justify;
 }
 
 .about__info{
@@ -1230,10 +1233,12 @@ img{
 
     .about__description{
         text-align: initial;
+        text-indent: 50px;
+        text-align: justify;
     }
 
     .about__info{
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     .about__buttons{
@@ -1283,9 +1288,10 @@ img{
     .project__container{
         background-color: var(--first-color-second);
         border-radius: 1rem;
-        padding: 3rem 2.5rem 0;
+        padding: 3rem 2.5rem 21px;
         grid-template-columns: 1fr max-content;
         column-gap: 3rem;
+        margin: 0 50px 0px 50px;
     }
 
     .project__data{
