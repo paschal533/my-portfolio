@@ -158,18 +158,27 @@ img{
     text-align: center;
 }
 
+
 .card {
     /* Add shadows to create the "card" effect */
     flex-direction: column;
+    border-radius: 10px;
     display: flex;
-    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+    box-shadow: 0 6px 20px 0 rgb(0 0 0 / 70%);
     transition: 0.3s;
     align-items: center;
     width: 100%;
     padding: 10px;
     justify-content: center;
-    margin-bottom: 70px;
+    margin-bottom: 80px;
   }
+.ant{
+    font-size: 30px;
+    color: var(--title-color);
+}
+.card:last-child{
+    margin-bottom: 0px;
+}
   
   /* On mouse-over, add a deeper shadow */
 .card:hover {
@@ -474,7 +483,6 @@ img{
 .about__info-title{
     font-size: var(--h2-font-size);
     font-weight: var(--font-semi-bold);
-    color: var(--title-color);
 }
 
 .about__info-name{
@@ -903,6 +911,11 @@ img{
     font-weight: var(--font-medium);
 }
 
+.portfolio__data{
+    margin-left: initial;
+    margin-top: 10px;
+}
+
 .testimonial__client{
     font-size: var(--small-font-size);
     color: var(--text-color-light);
@@ -1174,13 +1187,15 @@ img{
         display: grid;
     }
     .card {
-        /* Add shadows to create the "card" effect */
-        flex-direction: column;
+        /* Add shadows 
+        to create the "card" effect */
+        border-radius: 10px;
+        flex-direction: initial;
         display: flex;
-        box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+        box-shadow: 0 6px 20px 0 rgb(0 0 0 / 70%);
         transition: 0.3s;
         align-items: center;
-        width: 50%;
+        width: 100%;
         padding: 10px;
         justify-content: center;
         margin-bottom: 70px;
@@ -1305,6 +1320,12 @@ img{
 
     .portfolio__img{
         width: 320px;
+        margin-top: initial;
+    }
+
+    .portfolio__data{
+        margin-left: 20px;
+        margin-top: initial;
     }
 
     .portfolio__content{

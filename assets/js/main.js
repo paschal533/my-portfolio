@@ -96,7 +96,7 @@ tabs.forEach(tab => {
     })
 })
 
-/*==================== SERVICES MODAL ====================*/
+/*==================== SERVICES MODAL ====================
 const modalViews = document.querySelectorAll('.services__modal'),
       modalBtns = document.querySelectorAll('.services__button'),
       modalCloses = document.querySelectorAll('.services__modal-close')
@@ -117,9 +117,9 @@ modalCloses.forEach((modalClose) => {
             modalView.classList.remove('active-modal')
         })
     })
-})
+})*/
 
-/*==================== PORTFOLIO SWIPER  ====================*/
+/*==================== PORTFOLIO SWIPER  ==================== 
 let swiperPortfolio = new Swiper('.portfolio__container', {
     cssMode: true,
     loop: true,
@@ -131,7 +131,7 @@ let swiperPortfolio = new Swiper('.portfolio__container', {
         el: '.swiper-pagination',
         clickable: true,
     },
-});
+});*/
 
 
 /*==================== TESTIMONIAL ====================*/
