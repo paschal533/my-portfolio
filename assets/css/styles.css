@@ -226,7 +226,7 @@ img{
 
 .nav__logo h3:nth-child(1){
     color: transparent;
-    -webkit-text-stroke: .1px var(--title-color);
+    -webkit-text-stroke: .3px var(--title-color);
 }
 
 .nav__logo h3:nth-child(2){
