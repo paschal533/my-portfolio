@@ -418,7 +418,10 @@ img{
     border-radius: .5rem;
     font-weight: var(--font-medium);
 }
-
+.submit-btn {
+    outline: none;
+    border: none;
+}
 .about__button{
     display: inline-block;
     background-color: white;
