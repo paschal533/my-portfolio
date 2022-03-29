@@ -419,6 +419,15 @@ img{
     font-weight: var(--font-medium);
 }
 
+.about__button{
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+}
+
 .button:hover{
     background-color: var(--first-color-alt);
 }
